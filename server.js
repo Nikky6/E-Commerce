@@ -10,6 +10,7 @@ const userRouter = require('./routes/UserRoutes');
 const productRouter = require('./routes/ProductRoutes');
 const cartRouter = require('./routes/CartRoutes');
 const orderRouter = require('./routes/OrderRoutes');
+const adminRouter = require('./admin/adminRoutes')
 
 
 
@@ -18,9 +19,10 @@ app.use(express.json());
 
 
 app.use('/api/user', userRouter);
-app.use('/api/product',productRouter);
-app.use('/api/cart',cartRouter);
-app.use('/api/order',orderRouter)
+app.use('/api/product', productRouter);
+app.use('/api/cart', cartRouter);
+app.use('/api/order', orderRouter)
+app.use('/api/admin', adminRouter)
 
 
 app.listen(port, () => {
